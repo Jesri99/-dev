@@ -1,0 +1,114 @@
+Soru 1
+ 
+ArrayList sayilar = new ArrayList() { 10, 20, 30, 40, 50 }; 
+int toplam = 0;
+foreach (int sayi in sayilar)Console.WriteLine(sayi);
+            toplam += sayi;Console.WriteLine("Sayıların Toplamı: " + toplam);
+ 
+Soru 2
+ 
+Console.Write("Bir cümle girin: ");
+string cumle = Console.ReadLine();
+string[] kelimeler = cumle.Split(' ');
+int kelimeSayisi = kelimeler.Length;
+        Console.WriteLine("Cümledeki kelime sayısı: " + kelimeSayisi);
+ 
+Soru 3 
+ 
+ArrayList isimler = new ArrayList()
+for (int i = 1; i <= 5; i++
+Console.Write("İsim girin (" + i + "): "); 
+            string isim = Console.ReadLine();
+            isimler.Add(isim);
+ isimler.Sort();
+Console.WriteLine("\nAlfabetik sıraya göre isimler:");
+        foreach (string isim in isimler)
+Console.WriteLine(isim);
+ 
+Soru 4 
+ 
+Console.Write("Fibonacci serisinin eleman sayısını girin: ");
+int ilk = 0, ikinci = 1, sonraki;
+Console.Write("Fibonacci Serisi: ");
+for (int i = 0; i < n; i++) 
+f (i <= 1)
+                sonraki = i;
+            else
+sonraki = ilk + ikinci;
+                ilk = ikinci;
+                ikinci = sonraki;
+Console.Write(sonraki + " ");
+ 
+Soru 5 
+ 
+static void Main()
+andom random = new Random();
+        int hedefSayi = random.Next(1, 101); // 1 ile 100 arasında rastgele bir sayı
+        int tahmin;
+Console.WriteLine("1 ile 100 arasında bir sayıyı tahmin edin.");
+Console.Write("Tahmininizi girin: ");
+            tahmin = Convert.ToInt32(Console.ReadLine());
+if (tahmin < hedefSayi) 
+Console.WriteLine("Daha yüksek bir sayı deneyin."); 
+ else if (tahmin > hedefSayi) 
+Console.WriteLine("Daha düşük bir sayı deneyin."); 
+while (tahmin != hedefSayi);
+        Console.WriteLine("Tebrikler! Doğru tahmin ettiniz.");
+ 
+Soru 6
+  
+Console.Write("İşlem türünü girin (+, -, *, /) veya 'çıkış' yazın: ");
+            islem = Console.ReadLine();
+ 
+            if (islem == "çıkış") break;
+ 
+            Console.Write("Birinci sayıyı girin: ");
+            double sayi1 = Convert.ToDouble(Console.ReadLine());
+ 
+            Console.Write("İkinci sayıyı girin: ");
+            double sayi2 = Convert.ToDouble(Console.ReadLine());
+ 
+            switch (islem)
+case "+":
+                    Console.WriteLine("Sonuç: " + (sayi1 + sayi2));
+                    break;
+                case "-":
+                    Console.WriteLine("Sonuç: " + (sayi1 - sayi2));
+                    break;
+                case "*":
+                    Console.WriteLine("Sonuç: " + (sayi1 * sayi2));
+                    break;
+                case "/":
+                    if (sayi2 != 0)
+                        Console.WriteLine("Sonuç: " + (sayi1 / sayi2));
+                    else
+                        Console.WriteLine("Hata: Sıfıra bölme hatası.");
+                    break;
+                default:
+                    Console.WriteLine("Geçersiz işlem.");
+                    break;
+while (true);
+ 
+        Console.WriteLine("Program sonlandırıldı.")
+ 
+Soru 7 
+ 
+int toplam = 0;
+        int sayi;
+ 
+        Console.WriteLine("Pozitif tam sayılar girin. Bitirmek için '0' girin.");
+ 
+        while (true)
+Console.Write("Sayı girin: ");
+            sayi = Convert.ToInt32(Console.ReadLine());
+ 
+            if (sayi == 0)
+                break;
+ 
+            if (sayi > 0)
+                toplam += sayi;
+Console.WriteLine("Girilen pozitif sayıların toplamı: " + toplam);
+ 
+        Console.WriteLine("Tek olan pozitif sayılar:");
+        for (int i = 1; i <= toplam; i += 2)
+Console.WriteLine(i);
